@@ -74,6 +74,7 @@ if (isset($_GET["buscarFuncionario"])) {
                 <th>Endereço IP</th>
                 <th>País</th>
                 <th>Departamento</th>
+                <th>Ações</th>
             </tr>
             <!-- loop que percorre o array de funcionários e cria uma nova linha na tabela para cada informação encontrada,
         nesse caso, para cada id, nome, sobrenome... -->
@@ -89,6 +90,10 @@ if (isset($_GET["buscarFuncionario"])) {
                     <td><?= $funcionario->ip_address ?></td>
                     <td><?= $funcionario->country ?></td>
                     <td><?= $funcionario->department ?></td>
+                    <td>
+                        <button class="material-icons" onclick="deletar(<?= $funcionario->id ?>)">delete</button>
+                        <button class="material-icons">edit</button>
+                    </td>
                 </tr>
             <?php
             endforeach;
@@ -97,15 +102,16 @@ if (isset($_GET["buscarFuncionario"])) {
         <div class="modal-form">
             <form class="container-form-funcionario" action="acoes.php" method="POST">
                 <h1>Adicionar funcionário</h1>
-                <input type="text" name="id" placeholder="Digite seu ID">
-                <input type="text" name="first_name" placeholder="Digite seu nome">
-                <input type="text" name="last_name" placeholder="Digite seu sobrenome">
-                <input type="text" name="email" placeholder="Digite seu e-mail">
-                <input type="text" name="gender" placeholder="Digite seu gênero">
-                <input type="text" name="ip_address" placeholder="Digite seu endereço IP">
-                <input type="text" name="country" placeholder="Digite seu país">
-                <input type="text" name="department" placeholder="Digite seu departamento">
-                <button>Cadastrar</button>
+                <input type="text" name="id" placeholder="Digite seu ID" required>
+                <input type="text" name="first_name" placeholder="Digite seu nome" required>
+                <input type="text" name="last_name" placeholder="Digite seu sobrenome" required>
+                <input type="text" name="email" placeholder="Digite seu e-mail" required>
+                <input type="text" name="gender" placeholder="Digite seu gênero" required>
+                <input type="text" name="ip_address" placeholder="Digite seu endereço IP" required>
+                <input type="text" name="country" placeholder="Digite seu país" required>
+                <input type="text" name="department" placeholder="Digite seu departamento" required>
+                <button class="buttonCadastrar">Cadastrar</button>
+                <button class="buttonCancelar" type="button" onclick="exitModal()">Cancelar</button>
             </form>
         </div>
     </div>
