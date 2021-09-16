@@ -20,5 +20,13 @@ function deletar(idFuncionario) {
     }
 }
 
+// função de editar
+function editar(idFuncionario) {
+
+    // teste de recebimento
+    window.location = "editar.php?id=" + idFuncionario
+
+}
+
 document.getElementById("btnAddFuncionario")
     .addEventListener("click", showModal);

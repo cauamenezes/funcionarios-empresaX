@@ -92,7 +92,7 @@ if (isset($_GET["buscarFuncionario"])) {
                     <td><?= $funcionario->department ?></td>
                     <td>
                         <button class="material-icons" onclick="deletar(<?= $funcionario->id ?>)">delete</button>
-                        <button class="material-icons">edit</button>
+                        <button class="material-icons" onclick="editar(<?= $funcionario->id ?>)">edit</button>
                     </td>
                 </tr>
             <?php
