@@ -4,7 +4,7 @@ require("./funcoes.php");
 
 $funcionarioId = $_GET["id"];
 
-$funcionario = buscarFuncionarioPorId("./empresaX.json", $funcionarioId);
+$funcionario = buscarFuncionarioPorId("./dados/empresaX.json", $funcionarioId);
 
 //Debug
 // echo "<pre>";
