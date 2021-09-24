@@ -4,6 +4,6 @@ require("./funcoes.php");
 
 $idFuncionario = $_GET["id"];
 
-deletarFuncionario("./empresaX.json", $idFuncionario);
+deletarFuncionario("./dados/empresaX.json", $idFuncionario);
 
-header("location: index.php");
+header("location: area_restrita.php");

@@ -149,7 +149,7 @@ h3 {
     box-shadow: 0px 0px 20px #000;
 }
 
-.buttonCadastrar {
+.buttonCadastrar, .buttonSalvar {
     background-color: #00FF00;
 }
 

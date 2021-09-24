@@ -42,7 +42,7 @@ $funcionario = buscarFuncionarioPorId("./dados/empresaX.json", $funcionarioId);
                 <input type="text" placeholder="Digite o IP" name="ip_address" value="<?= $funcionario->ip_address ?>" />
                 <input type="text" placeholder="Digite o país" name="country" value="<?= $funcionario->country ?>" />
                 <input type="text" placeholder="Digite o departamento" name="department" value="<?= $funcionario->department ?>" />
-                <button>Salvar</button>
+                <button class="buttonSalvar">Salvar</button>
             <?php } ?>
         </form>
     </div>
